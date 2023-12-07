@@ -58,10 +58,10 @@ public class SignUp extends JFrame implements ActionListener {
 
 		idCheck = false;
 		nameCheck = false;
-		
+
 		this.login = login;
 
-		setTitle("회원가입");
+		setTitle("톡Talk");
 		setSize(400, 500);
 
 		// 타이틀 추가
@@ -233,8 +233,8 @@ public class SignUp extends JFrame implements ActionListener {
 
 		}
 		else if(obj == btnNameCheck) {
-			
-			
+
+
 			String sql = "SELECT * FROM users WHERE nickname ='" + strName + "'";
 
 			ResultSet rs = DB.getResultSet(sql);
@@ -258,10 +258,10 @@ public class SignUp extends JFrame implements ActionListener {
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
-			
-			
+
+
 		}
-		
+
 		else if (obj == btnSignup) { // 회원가입 버튼
 
 			// 모든 정보 입력하지 않은 경우

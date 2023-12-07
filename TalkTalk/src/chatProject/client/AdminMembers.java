@@ -43,7 +43,7 @@ public class AdminMembers extends JFrame implements ActionListener {
 	public AdminMembers(AdminMenu adminMenu) {
 
 		this.adminMenu = adminMenu;
-		setTitle("관리자 메뉴 - 사용자 목록");
+		setTitle("톡Talk");
 		setSize(800, 500);
 
 		// 검색 생성
@@ -63,20 +63,20 @@ public class AdminMembers extends JFrame implements ActionListener {
 	// 검색 패널
 	private void addSearch() {
 
-		
+
 		pSearch = new JPanel();
 		pSearch.setLayout(new BorderLayout(0, 20));
 		pSearch.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 0));
 		pSearch.setBackground(Color.white);
-		
+
 		lblSearchTitle = new JLabel("  | ID or 닉네임 검색");
 		pSearch.add(lblSearchTitle, BorderLayout.NORTH);
-		
-		
+
+
 		pSearchInput = new JPanel();
 		pSearchInput.setLayout(new FlowLayout(FlowLayout.LEFT));
 		pSearchInput.setBackground(Color.white);
-		
+
 		tfSearch = new JTextField();
 		tfSearch.setPreferredSize(new Dimension(300, 30));
 		tfSearch.addActionListener(this);
@@ -87,7 +87,7 @@ public class AdminMembers extends JFrame implements ActionListener {
 		btnSearch.addActionListener(this);
 		pSearchInput.add(btnSearch);
 		pSearch.add(pSearchInput, BorderLayout.CENTER);
-		
+
 	}
 
 	// 사람 데이터를 가져와 테이블 생성
@@ -97,17 +97,17 @@ public class AdminMembers extends JFrame implements ActionListener {
 		pInfo.setBorder(BorderFactory.createEmptyBorder(15, 39, 40, 0));
 		pInfo.setLayout(new BorderLayout());
 		pInfo.setBackground(Color.white);
-		
+
 		lblTitle = new JLabel("| 사용자 목록");
 		pInfo.add(lblTitle, BorderLayout.NORTH);
 
-		
+
 		// 테이블 생성
 		pTable = new JPanel();
 		pTable.setBackground(Color.white);
 		pTable.setLayout(new FlowLayout(FlowLayout.LEFT));
 		pTable.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0));
-		
+
 		// 테이블 헤더 생성
 		returnColumn = new Vector<String>();
 		returnColumn.add("ID");
@@ -135,9 +135,9 @@ public class AdminMembers extends JFrame implements ActionListener {
 		JScrollPane sc = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		sc.setPreferredSize(new Dimension(700, 230));
 		pTable.add(sc);
-		
+
 		pInfo.add(pTable, BorderLayout.CENTER);
-		
+
 
 	}
 
@@ -146,12 +146,12 @@ public class AdminMembers extends JFrame implements ActionListener {
 
 		ResultSet rs = DB.getResultSet(strRetable);
 		String[] rsArr = new String[4]; // 값 받아올 배열
-		
+
 		try {
-			
-			
+
+
 			while(rs.next()) {
-				
+
 				rsArr[0] = rs.getString(1);
 				rsArr[1] = rs.getString(2);
 				rsArr[2] = rs.getString(4).toString();
@@ -160,13 +160,13 @@ public class AdminMembers extends JFrame implements ActionListener {
 				}else {
 					rsArr[3] = rs.getString(5).toString().substring(0, 16);
 				}
-				
-				
+
+
 				model.addRow(rsArr); // 모델에 배열 추가
 			}
-			
-			
-			
+
+
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -178,10 +178,10 @@ public class AdminMembers extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		Object obj = e.getSource();
-		
-		
+
+
 		if(obj == btnSearch || obj == tfSearch) {
-			
+
 			if(tfSearch.getText().equals("")) {
 				String strRetable ="select * from users order by last_login desc";
 				reTable(strRetable);	// 전체 조회

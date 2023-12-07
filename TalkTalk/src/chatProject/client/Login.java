@@ -35,7 +35,7 @@ public class Login extends JFrame implements ActionListener {
 
 	public Login() {
 
-		setTitle("로그인");
+		setTitle("톡Talk");
 		setSize(400, 540);
 
 		// 타이틀 추가
@@ -96,7 +96,7 @@ public class Login extends JFrame implements ActionListener {
 		pId.setLayout(new BorderLayout());
 
 		lblId = new JLabel("| ID");
-		pId.add(lblId, BorderLayout.WEST);
+		pId.add(lblId, BorderLayout.CENTER);
 
 		pInfo.add(pId);
 
@@ -109,7 +109,7 @@ public class Login extends JFrame implements ActionListener {
 		pPw.setLayout(new BorderLayout());
 
 		lblPw = new JLabel("| PW");
-		pPw.add(lblPw, BorderLayout.WEST);
+		pPw.add(lblPw, BorderLayout.CENTER);
 		pInfo.add(pPw);
 
 		// pw 입력받는 텍스트 필드

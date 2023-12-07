@@ -34,7 +34,7 @@ public class AdminMenu extends JFrame implements ActionListener {
 
 	public AdminMenu(ChatClient chat) {
 
-		setTitle("관리자 메뉴");
+		setTitle("톡Talk");
 		setSize(400, 300);
 
 		// 타이틀 추가

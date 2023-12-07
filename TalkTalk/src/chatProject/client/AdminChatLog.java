@@ -43,7 +43,7 @@ public class AdminChatLog extends JFrame implements ActionListener {
 	public AdminChatLog(AdminMenu adminMenu) {
 
 		this.adminMenu = adminMenu;
-		setTitle("관리자 메뉴 - 채팅 기록");
+		setTitle("톡Talk");
 		setSize(600, 800);
 
 		// 검색 생성

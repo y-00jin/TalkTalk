@@ -29,7 +29,7 @@ public class Notice extends JFrame implements ActionListener {
 		this.id = chat.getId();
 
 		this.chat = chat;
-		setTitle("공지");
+		setTitle("톡Talk");
 		setSize(400, 200);
 
 		// 타이틀 추가
@@ -56,10 +56,10 @@ public class Notice extends JFrame implements ActionListener {
 
 		pTitle = new JPanel();
 		pTitle.setBackground(Color.white);
-		pTitle.setLayout(new FlowLayout(FlowLayout.LEFT));
+		pTitle.setLayout(new BorderLayout());
 		pTitle.setBorder(BorderFactory.createEmptyBorder(30, 15, 0, 0));
 		lblTitle = new JLabel("| 공지를 입력하세요");
-		pTitle.add(lblTitle);
+		pTitle.add(lblTitle, BorderLayout.CENTER);
 
 	}
 
@@ -98,7 +98,7 @@ public class Notice extends JFrame implements ActionListener {
 
 				String strInsert = "INSERT INTO \"notice\" (user_id, notice_msg) "
 				+ "VALUES('" + id + "', '"+tfNotice.getText() + "')";
-				
+
 				// db에 저장
 				DB.executeQuery(strInsert);
 
@@ -107,12 +107,12 @@ public class Notice extends JFrame implements ActionListener {
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
-				
+
 
 				tfNotice.setText("");
 				chat.noticeReset();	// 공지 리셋
 				dispose();
-				
+
 			}
 		}
 	}

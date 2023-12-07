@@ -118,7 +118,7 @@ public class ChatClient implements ActionListener {
 		// 접속한 아이디
 		lblName = new JLabel("닉네임  :  " + nickname);
 		lblName.setForeground(Color.white);
-		pTitle.add(lblName, BorderLayout.WEST); // 패널 좌측에 추가
+		pTitle.add(lblName, BorderLayout.CENTER); // 패널 좌측에 추가
 
 		pMenuList = new JPanel();
 		pMenuList.setLayout(new BorderLayout(10, 0));
@@ -335,12 +335,12 @@ public class ChatClient implements ActionListener {
 		// 관리자 메뉴
 		else if (obj == btnMenu) {
 			adminMenu = new AdminMenu(this);
-			
+
 		}
 	}
 
 	public void exit() {
-		
+
 		System.exit(0);
 	}
 
@@ -404,30 +404,30 @@ public class ChatClient implements ActionListener {
 
 	// 강퇴 메소드
 	public void kickOutput(String str) throws IOException {
-        
+
 		String strUserId="";
 		int kickCount = 0;
 
 		try {
-			
+
 			String strSelect = "select * from users where nickname ='" + str + "'";
 			ResultSet rs = DB.getResultSet(strSelect);
-			
+
 			while (rs.next()) {
 				strUserId = rs.getString(1);	// 사용자 id
 				kickCount = rs.getInt(4);		// 강퇴 횟수
 			}
-			
+
 			kickCount++;	// 1회 추가
-			
+
 			String strUpdate = "UPDATE users "
 					+ "SET kick_count="+ kickCount
 					+ " WHERE user_id='"+strUserId+"'";
-			
+
 			// db 수정
 			DB.executeQuery(strUpdate);
-			
-			
+
+
 		} catch (SQLException e) {
 			kickCount = 0;
 		}

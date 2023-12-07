@@ -31,7 +31,7 @@ public class UserList extends JFrame implements ListSelectionListener, ActionLis
 		this.id = chat.getId();
 		this.oos = chat.getOos();
 		this.nickname = chat.getNickname();
-		setTitle("사용자 목록");
+		setTitle("톡Talk");
 		setSize(400, 550);
 
 		// 타이틀 생성
@@ -63,13 +63,13 @@ public class UserList extends JFrame implements ListSelectionListener, ActionLis
 	private void addTitle() {
 
 		pTitle = new JPanel();
-		pTitle.setLayout(new FlowLayout(FlowLayout.LEFT));
+		pTitle.setLayout(new BorderLayout());
 		pTitle.setBackground(new Color(BGCOLOR));
 		lblTitle = new JLabel("| 사용자 목록");
 		lblTitle.setForeground(Color.white);
 		lblTitle.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
 
-		pTitle.add(lblTitle);
+		pTitle.add(lblTitle, BorderLayout.CENTER);
 
 	}
 
@@ -127,7 +127,7 @@ public class UserList extends JFrame implements ListSelectionListener, ActionLis
 			btnKick.addActionListener(this);
 			pWhisp.add(btnKick);
 		}
-		
+
 	}
 
 	public Vector<String> getvUserList() {
@@ -177,7 +177,7 @@ public class UserList extends JFrame implements ListSelectionListener, ActionLis
 
 			else if (tfSendMsg.getText().equals("")) {
 				JOptionPane.showMessageDialog(this, "메시지를 입력하세요.", "경고", JOptionPane.WARNING_MESSAGE);
-			} 
+			}
 			else if(reciveUser.equals(nickname)) {
 				JOptionPane.showMessageDialog(this, "본인에게 귓속말을 보낼 수 없습니다.", "경고", JOptionPane.WARNING_MESSAGE);
 			}
@@ -198,6 +198,6 @@ public class UserList extends JFrame implements ListSelectionListener, ActionLis
 		return pUList;
 	}
 
-	
+
 
 }
