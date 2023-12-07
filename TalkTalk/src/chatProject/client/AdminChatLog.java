@@ -55,7 +55,6 @@ public class AdminChatLog extends JFrame implements ActionListener {
 		add(pChat, BorderLayout.CENTER);
 
 		setResizable(false);
-//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocation(adminMenu.getX(), adminMenu.getY() + adminMenu.getHeight());
 		setVisible(true);
 	}
@@ -106,7 +105,7 @@ public class AdminChatLog extends JFrame implements ActionListener {
 				+ "join users "
 				+ "on users.user_id = chat_log.user_id "
 				+ "order by chat_id desc";
-		
+
 		reChat(join);	// 전체 조회
 
 		jsp = new JScrollPane(jta, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
@@ -115,7 +114,7 @@ public class AdminChatLog extends JFrame implements ActionListener {
 		pChat.add(jsp);
 	}
 
-	// 채팅 기록 db에서 불러와 
+	// 채팅 기록 db에서 불러옴
 	private void reChat(String selectStr) {
 
 		try {
@@ -137,7 +136,7 @@ public class AdminChatLog extends JFrame implements ActionListener {
 					jta.append(msg);
 				}
 				jta.setCaretPosition(jta.getDocument().getLength());
-				
+
 			}
 
 		} catch (SQLException e) {
@@ -152,36 +151,32 @@ public class AdminChatLog extends JFrame implements ActionListener {
 
 		Object obj = e.getSource();
 		if(obj == btnSearch || obj == tfSearch) {
-			
+
 			jta.setText("");
-			
+
 			if(tfSearch.getText().equals("")) {
 				String join = "select distinct * "
 						+ "from chat_log "
 						+ "join users "
 						+ "on users.user_id = chat_log.user_id "
 						+ "order by chat_id desc";
-				
+
 				reChat(join);	// 전체 조회
 			}else {
-				
+
 				String join = "select distinct * "
 					+ "from chat_log "
 					+ "join users "
 					+ "on users.user_id = chat_log.user_id "
 					+ "where nickname like '%"+tfSearch.getText()+"%' "
 					+ "order by chat_id desc";
-			
+
 				reChat(join);	// 전체 조회
-				
+
 			}
-			
+
 			tfSearch.setText("");
 		}
 	}
-
-//	public static void main(String[] args) {
-//		new AdminChatLog();
-//	}
 
 }

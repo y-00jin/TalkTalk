@@ -13,8 +13,8 @@ public class StartServer {
 		DB.init();
 
 
-//		// 테이블 생성
-		DB.createTable();
+//		// 테이블 생성 -> 첫 실행 시 주석 해제하면 테이블 생성 (생성 후에는 주석)
+//		DB.createTable();
 
 		// 서버 실행
 		new ChatServer();

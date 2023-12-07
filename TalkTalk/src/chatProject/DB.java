@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class DB {
 
-	
+
 	   public static Connection conn;
 	   public static Statement stmt;
 
@@ -22,8 +22,7 @@ public class DB {
 	         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "1234");
 
 	         stmt = conn.createStatement();
-	         
-//	         System.out.println("접속완료");
+
 	      } catch (ClassNotFoundException e) {
 	         System.out.println("해당 드라이버가 없습니다.");
 	         e.printStackTrace();
@@ -37,15 +36,15 @@ public class DB {
 	   public static ResultSet getResultSet(String sql) {
 	      try {
 	         return stmt.executeQuery(sql);
-	   
+
 	      }catch(Exception e){
 	         System.out.println(e);   //오류 메시지
-	         
+
 	         return null;
 	      }
 	   }
-	   
-	   // 삽입, 수정, 삭제 
+
+	   // 삽입, 수정, 삭제
 	   public static void executeQuery(String sql) {
 	      try {
 	         stmt.executeUpdate(sql);
@@ -53,7 +52,7 @@ public class DB {
 	         e.printStackTrace();
 	      }
 	   }
-	   
+
 	   // 테이블 삭제
 	   public static void dropTable() {
 		   String str = "DROP TABLE IF EXISTS users CASCADE; "
@@ -62,14 +61,14 @@ public class DB {
 		   		+ "DROP TABLE IF EXISTS emoji CASCADE;";
 		   executeQuery(str);
 	   }
-	   
-	   
+
+
 	   // 테이블 생성
 	   public static void createTable() {
-		   
+
 		   // 테이블 삭제
 		   dropTable();
-		   
+
 		   // 사용자 테이블 생성
 		   String str = "CREATE TABLE users ("
 		   		+ "	user_id varchar(20) NOT NULL,"
@@ -92,7 +91,7 @@ public class DB {
 		   		+ "	CONSTRAINT chat_log_fk FOREIGN KEY (user_id) REFERENCES public.users(user_id) "
 		   		+ ")";
 		   executeQuery(str);
-		   
+
 		   // 공지사항 테이블 생성
 		   str = " CREATE TABLE \"notice\" ("
 		   		+ "	notice_id serial4 NOT NULL,"
@@ -102,7 +101,7 @@ public class DB {
 		   		+ "	CONSTRAINT notice_fk FOREIGN KEY (user_id) REFERENCES public.users(user_id) "
 		   		+ ")";
 		   executeQuery(str);
-		   
+
 		   // 이모티콘 테이블 생성
 		   str =" CREATE TABLE emoji ("
 		   		+ "	emoji_id serial4 NOT NULL,"
@@ -110,7 +109,7 @@ public class DB {
 		   		+ "	CONSTRAINT emoji_pk PRIMARY KEY (emoji_id) "
 		   		+ ");";
 			executeQuery(str);
-			
+
 			str ="INSERT INTO emoji (emoji_text) VALUES"
 					+ " ('😀'),"
 					+ " ('😎'),"
@@ -126,12 +125,12 @@ public class DB {
 					+ " ('(•_•)'),"
 					+ " ('^_^')";
 			executeQuery(str);
-			
+
 			str = "INSERT INTO users"
 					+ " (user_id, nickname, \"password\", kick_count)"
 					+ " VALUES('admin', '관리자', 'admin1234', 0)";
 			executeQuery(str);
 	   }
-	   
-	   
+
+
 }
