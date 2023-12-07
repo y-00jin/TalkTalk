@@ -71,8 +71,8 @@ public class Login extends JFrame implements ActionListener {
 		pTitle.setBorder(BorderFactory.createEmptyBorder(30, 0, 0, 0));
 
 		imgLabel = new JLabel();
-		ImageIcon icon = new ImageIcon(Login.class.getResource("/chatProject/images/all4land.png"));
-		Image im = icon.getImage().getScaledInstance(200, 50, Image.SCALE_SMOOTH);
+		ImageIcon icon = new ImageIcon(Login.class.getResource("/chatProject/images/talkLogo.png"));
+		Image im = icon.getImage().getScaledInstance(220, 100, Image.SCALE_SMOOTH);
 		ImageIcon icon2 = new ImageIcon(im);
 		imgLabel.setIcon(icon2);
 
@@ -186,7 +186,7 @@ public class Login extends JFrame implements ActionListener {
 				}
 
 				if (loginCheck == true) {
-					
+
 					ChatClient c = new ChatClient("127.0.0.1", tfId.getText(), nickname);
 					try {
 						c.init(); // 소켓 실행

@@ -39,11 +39,11 @@ public class AdminMenu extends JFrame implements ActionListener {
 
 		// 타이틀 추가
 		addTitle();
-		add(pTitle, BorderLayout.NORTH); 
+		add(pTitle, BorderLayout.NORTH);
 
 		// 메뉴 버튼 추가
 		addMenu();
-		add(pMenu, BorderLayout.CENTER); 
+		add(pMenu, BorderLayout.CENTER);
 
 
 		setLocation(chat.returnFrame().getX()+this.getWidth(), chat.returnFrame().getY());
@@ -66,8 +66,8 @@ public class AdminMenu extends JFrame implements ActionListener {
 		pTitle.setBorder(BorderFactory.createEmptyBorder(30, 0, 0, 0));
 
 		imgLabel = new JLabel();
-		ImageIcon icon = new ImageIcon(AdminMenu.class.getResource("/chatProject/images/all4land.png"));
-		Image im = icon.getImage().getScaledInstance(200, 50, Image.SCALE_SMOOTH);
+		ImageIcon icon = new ImageIcon(AdminMenu.class.getResource("/chatProject/images/talkLogo.png"));
+		Image im = icon.getImage().getScaledInstance(150, 60, Image.SCALE_SMOOTH);
 		ImageIcon icon2 = new ImageIcon(im);
 		imgLabel.setIcon(icon2);
 
@@ -82,32 +82,32 @@ public class AdminMenu extends JFrame implements ActionListener {
 		pMenu.setLayout(new GridLayout(2, 1, 0, 20));
 		pMenu.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
 		pMenu.setBackground(Color.white);
-		
+
 		btnMembers = new JButton("사용자 목록");
 		BtnStyle.setStyle(btnMembers, BGCOLOR, 0XFFFFFF, 0, 0);
 		btnMembers.addActionListener(this);
 		pMenu.add(btnMembers);
-		
-		
+
+
 		btnChatLog = new JButton("채팅 기록");
 		BtnStyle.setStyle(btnChatLog, BGCOLOR, 0XFFFFFF, 0, 0);
 		btnChatLog.addActionListener(this);
 		pMenu.add(btnChatLog);
-		
+
 	}
 
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
-		
+
 		if(obj == btnMembers) {
 			new AdminMembers(this);
-			
+
 		}
 		else if(obj == btnChatLog) {
 			new AdminChatLog(this);
-			
+
 		}
 	}
 }
