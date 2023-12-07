@@ -1,5 +1,5 @@
 
-# 톡Talk
+# 톡Talk💫
 <br>
 
 ### 📑 프로젝트 개요
@@ -63,7 +63,10 @@
 <br>
 
 ### 👀 Language & Tools
-<img src="https://img.shields.io/badge/Java-ffffff?style=flat&logo=Eclipse IDE&logoColor=2C2255"/>       <!-- 자바 -->
+<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white">   <!-- 자바 -->
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=ffffff"/>          <!-- PostgreSQL-->
+
+
 
 <br>
 
