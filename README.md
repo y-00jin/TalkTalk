@@ -72,42 +72,44 @@
 
 ### 🍀 Result
 - 로그인<br><br>
-![로그인](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/00fb5d1e-90ba-4172-82ef-e9e14c8be719) <br>
+![로그인](https://github.com/y-00jin/TalkTalk/assets/81798918/46d8bc5a-e899-4f5a-bfe1-ed50bb4adee3)
+<br>
 
 - 회원가입<br><br>
-![회원가입](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/ac3fffc3-3708-464f-a1f3-e6e679c2e4cc) <br>
+![회원가입](https://github.com/y-00jin/TalkTalk/assets/81798918/18914c7d-7bd7-487e-b9bc-27e7ba5accb2)
+<br>
 
 - 채팅방<br><br>
-![채팅방](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/5a300605-db6b-4949-bfeb-f7079e96e27e) <br>
+![채팅방](https://github.com/y-00jin/TalkTalk/assets/81798918/75d701b5-8728-4d3e-9af0-1ea05c232e9f)
+<br>
 
 - 이모티콘<br><br>
-![이모티콘 목록](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/209193ba-54ac-4206-9cb5-4969b6923a9d)
+![이모티콘](https://github.com/y-00jin/TalkTalk/assets/81798918/fd6e07da-197f-46fc-8b70-bb2206c07afe)
 <br>
 
 - 접속 사용자 목록<br><br>
-![사용자 목록](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/b9da353d-ac91-4806-a325-3b6faf9f6484)
+![사용자목록](https://github.com/y-00jin/TalkTalk/assets/81798918/ea8b18a9-5738-4c66-b220-dfb23fd693cd)
 <br>
 
 - 공지<br><br>
-![re_공지](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/2a6465ad-59be-4f11-ab6d-e56e317fd5b3)
+![공지입력창](https://github.com/y-00jin/TalkTalk/assets/81798918/e529f66e-b879-40c9-9290-a61730915843)
+<br>
+![공지사항](https://github.com/y-00jin/TalkTalk/assets/81798918/3d12ef3e-cf67-4333-a1b4-20caf7b1dd1e)
 <br>
 
 - 관리자 메뉴<br><br>
-![관리자메뉴](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/45c854a5-1ad3-4fdd-82d6-78953962ada2)
+![관리자메뉴](https://github.com/y-00jin/TalkTalk/assets/81798918/32b7cfb7-9697-4830-a48f-1e166f244424)
 <br>
 
 - 관리자 메뉴 - 사용자 목록<br><br>
-![관리자메뉴_사용자목록](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/1c816eaa-5027-4284-b717-7a7ff2a11234)
+![관리자메뉴_사용자목록](https://github.com/y-00jin/TalkTalk/assets/81798918/16501a0a-a268-4cbf-a5d6-c3155f41a2a9)
 <br>
 
 - 관리자 메뉴 - 채팅 기록<br><br>
-![관리자메뉴_채팅기록](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/08bb2649-5c95-4cf4-ac15-889d0a420970)
+![관리자메뉴_채팅기록](https://github.com/y-00jin/TalkTalk/assets/81798918/84d4a003-881b-4e25-9a82-b5c9588fd59a)
 <br>
 
 
 - 시연 영상<br><br>
-
-https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/4795e9b4-ba6f-47b5-b9be-3aa072070ad7
-
 
 
