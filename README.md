@@ -45,11 +45,15 @@
 
 ### 🌐 프로젝트 구성
 - 패키지 구조<br><br>
-![re_프로젝트구조1](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/e69a95e6-d388-41a5-b36d-75f5de0dcf4a)<br>
-![re_프로젝트구조2](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/f6fbacff-cbc0-4613-95be-7ebcb19abd28)<br>
+
+![패키지구조_1](https://github.com/y-00jin/TalkTalk/assets/81798918/ef24ec0b-10d6-4ccd-88bd-9e62ae05528a)
+<br>
+
+![패키지구조_2](https://github.com/y-00jin/TalkTalk/assets/81798918/d93a11cc-7623-43f0-a0fd-9e454c05cfb9)
+
 
 - 데이터베이스 설계 <br><br>
-![re_데이터베이스구조](https://github.com/y-00jin/MultiChat-Swing-Socket/assets/81798918/510bda27-bf55-4f57-af64-33ddc8dc0521)
+![DB구조](https://github.com/y-00jin/TalkTalk/assets/81798918/0ff62fc6-704b-4d3f-a194-15eeac7b89f0)
 <br><br>
 
 ### ⚙️ 실행 방법
@@ -92,8 +96,8 @@
 <br>
 
 - 공지<br><br>
-![공지입력창](https://github.com/y-00jin/TalkTalk/assets/81798918/e529f66e-b879-40c9-9290-a61730915843)
-<br>
+![공지입력창](https://github.com/y-00jin/TalkTalk/assets/81798918/0d123cf9-1097-4893-82a7-af44f42d376a)
+
 ![공지사항](https://github.com/y-00jin/TalkTalk/assets/81798918/3d12ef3e-cf67-4333-a1b4-20caf7b1dd1e)
 <br>
 
@@ -111,5 +115,14 @@
 
 
 - 시연 영상<br><br>
+
+https://github.com/y-00jin/TalkTalk/assets/81798918/01304a16-b019-42fd-b998-7b7abfea78ec
+
+
+
+
+
+
+
 
 
